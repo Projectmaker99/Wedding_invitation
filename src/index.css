@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap');
+
+@layer base {
+  :root {
+    /* Traditional Indian Wedding Theme - Rich & Auspicious */
+    --background: 30 35% 97%;
+    --foreground: 350 70% 12%;
+
+    --card: 32 45% 95%;
+    --card-foreground: 350 70% 12%;
+
+    --popover: 30 35% 97%;
+    --popover-foreground: 350 70% 12%;
+
+    /* Rich Maroon/Kumkum Red - Primary */
+    --primary: 350 75% 28%;
+    --primary-foreground: 40 50% 95%;
+
+    /* Rich Gold/Saffron - Secondary */
+    --secondary: 42 90% 50%;
+    --secondary-foreground: 350 70% 12%;
+
+    /* Warm Cream/Ivory tones */
+    --muted: 38 35% 92%;
+    --muted-foreground: 350 50% 30%;
+
+    /* Deep Green Accent */
+    --accent: 150 55% 25%;
+    --accent-foreground: 40 50% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 38 40% 85%;
+    --input: 38 40% 85%;
+    --ring: 350 75% 28%;
+
+    --radius: 0.5rem;
+
+    /* Custom Wedding Variables - Richer Colors */
+    --gold: 42 95% 48%;
+    --gold-light: 45 90% 65%;
+    --maroon: 350 75% 28%;
+    --maroon-dark: 350 80% 20%;
+    --cream: 38 45% 96%;
+    --cream-dark: 35 35% 90%;
+    --emerald: 150 55% 25%;
+    --haldi: 48 95% 55%;
+    --haldi-light: 50 98% 68%;
+    --haldi-dark: 45 90% 48%;
+    --saffron: 25 95% 55%;
+    --pink: 340 70% 55%;
+    
+    /* Rich Wedding Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(42, 95%, 48%) 0%, hsl(45, 90%, 60%) 50%, hsl(42, 95%, 48%) 100%);
+    --gradient-maroon: linear-gradient(180deg, hsl(350, 75%, 28%) 0%, hsl(350, 80%, 20%) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(38, 45%, 96%) 0%, hsl(35, 35%, 90%) 100%);
+    --gradient-wedding: linear-gradient(135deg, hsl(350, 75%, 28%) 0%, hsl(25, 95%, 55%) 50%, hsl(42, 95%, 48%) 100%);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 60% 8%;
+    --foreground: 35 30% 96%;
+    --card: 0 60% 12%;
+    --card-foreground: 35 30% 96%;
+    --popover: 0 60% 8%;
+    --popover-foreground: 35 30% 96%;
+    --primary: 38 80% 55%;
+    --primary-foreground: 0 60% 15%;
+    --secondary: 0 65% 25%;
+    --secondary-foreground: 35 30% 96%;
+    --muted: 0 50% 15%;
+    --muted-foreground: 35 25% 70%;
+    --accent: 145 50% 40%;
+    --accent-foreground: 35 30% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 50% 20%;
+    --input: 0 50% 20%;
+    --ring: 38 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .font-decorative {
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-elegant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-maroon {
+    color: hsl(var(--maroon));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .bg-maroon {
+    background-color: hsl(var(--maroon));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .bg-haldi {
+    background: linear-gradient(135deg, hsl(48, 95%, 70%) 0%, hsl(45, 90%, 60%) 50%, hsl(42, 85%, 55%) 100%);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-maroon {
+    background: var(--gradient-maroon);
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  /* Decorative Patterns */
+  .pattern-mandala {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a853' fill-opacity='0.15'%3E%3Cpath d='M30 30c0-11.046 8.954-20 20-20s20 8.954 20 20-8.954 20-20 20-20-8.954-20-20zm0 0c0 11.046-8.954 20-20 20S-10 41.046-10 30s8.954-20 20-20 20 8.954 20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .pattern-paisley {
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a853' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3E%3C/svg%3E");
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes rotateIn {
+    from {
+      opacity: 0;
+      transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(38, 80%, 55%, 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(38, 80%, 55%, 0.6);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(38, 80%, 70%, 0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.6s ease-out forwards;
+  }
+
+  .animate-rotate-in {
+    animation: rotateIn 0.8s ease-out forwards;
+  }
+
+  .animate-pulse-gold {
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+
+  /* Decorative Elements */
+  .divider-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .divider-ornament::before,
+  .divider-ornament::after {
+    content: '';
+    flex: 1;
+    max-width: 100px;
+    height: 2px;
+    background: var(--gradient-gold);
+  }
+
+  .gold-border {
+    border: 2px solid hsl(var(--gold));
+    box-shadow: 
+      inset 0 0 20px hsl(38, 80%, 55%, 0.1),
+      0 0 20px hsl(38, 80%, 55%, 0.1);
+  }
+
+  .section-container {
+    @apply min-h-screen flex flex-col items-center justify-center px-4 py-16;
+  }
+}
